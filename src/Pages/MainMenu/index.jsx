@@ -16,25 +16,25 @@ const MainMenu = () => {
       </li>
       <li className="categories">
         <Button
-          onclick={() => navigate("/dashboard/top_rated")}
+          onClick={() => navigate("top_rated")}
           children="Top rated"
         />
       </li>
       <li className="categories">
         <Button
-          onclick={() => navigate("/dashboard/upcoming")}
+          onClick={() => navigate("upcoming")}
           children="Upcoming"
         />
       </li>
       <li className="categories">
         <Button
-          onclick={() => navigate("/dashboard/popular")}
+          onClick={() => navigate("popular")}
           children="Popular"
         />
       </li>
       <li className="categories">
         <Button
-          onclick={() => navigate("/dashboard/ondemand")}
+          onClick={() => navigate("on_demand")}
           children="On demand"
         />
       </li>
