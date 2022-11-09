@@ -6,7 +6,6 @@ import {
   Routes
   } from 'react-router-dom';
 import './App.css';
-import MainMenu from './Pages/MainMenu';
 import TopRated from './Pages/TopRated';
 import Dasboard from './components/DashBoard';
 

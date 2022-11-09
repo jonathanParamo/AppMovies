@@ -11,7 +11,7 @@ const MainMenu = () => {
         <input
           className="search_menu"
           type="search"
-          placeholder="Buscar pelicula"
+          placeholder="Search movie"
         />
       </li>
       <li className="categories">
@@ -23,19 +23,19 @@ const MainMenu = () => {
       <li className="categories">
         <Button
           onclick={() => navigate("/dashboard/upcoming")}
-          children="Proximamente"
+          children="Upcoming"
         />
       </li>
       <li className="categories">
         <Button
           onclick={() => navigate("/dashboard/popular")}
-          children="Populares"
+          children="Popular"
         />
       </li>
       <li className="categories">
         <Button
           onclick={() => navigate("/dashboard/ondemand")}
-          children="Lo mas buscado"
+          children="On demand"
         />
       </li>
     </ul>

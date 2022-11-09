@@ -1,0 +1,8 @@
+.container_top_rated {
+  width: 100%;
+  height: calc(100vh - 40px);
+  flex-wrap: wrap;
+  overflow-y: auto;
+  display: flex;
+  justify-content: space-around;
+}
