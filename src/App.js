@@ -6,21 +6,18 @@ import {
   Routes
   } from 'react-router-dom';
 import './App.css';
-import TopRated from './Pages/TopRated';
-import Upcoming from './Pages/Upcoming';
-import Dasboard from './components/DashBoard';
-import Popular from './Pages/Popular';
-import OnDemand from './Pages/OnDemand';
+import Movies from './Pages/Movies';
+import Dashboard from './components/Dashboard'
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/dashboard/' element={<Dasboard /> } >
-          <Route path='/dashboard/popular' element={<Popular />} />
-          <Route path='/dashboard/top_rated' element={<TopRated />} />
-          <Route path='/dashboard/upcoming' element={<Upcoming />} />
-          <Route path='/dashboard/on_demand' element={<OnDemand />} />
+        <Route path='/dashboard/' element={<Dashboard /> } >
+          <Route path='/dashboard/popular' element={<Movies gender="popular" />} />
+          <Route path='/dashboard/top_rated' element={<Movies gender="top_rated" />} />
+          <Route path='/dashboard/upcoming' element={<Movies gender="upcoming" />} />
+          <Route path='/dashboard/on_demand' element={<Movies gender="now_playing" />} />
         </Route>
       </Routes>
     </Router>
