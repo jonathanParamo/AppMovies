@@ -2,9 +2,9 @@ import { useState, useEffect  } from "react"
 import { Link } from "react-router-dom"
 import "./styles.css"
 import Movie from "../../components/Movie"
-import { getMovies } from "../../Utils/Api"
+import { getMovies, searchMovie } from "../../Utils/Api"
 
-const Movies = ({ gender }) => {
+const Movies = ({ gender, search }) => {
   const [ loading, setLoading ] = useState(false)
   const [ movies, setMovies ] = useState([])
   // const [ pages, setPages ] = useState(0)
@@ -20,7 +20,15 @@ const Movies = ({ gender }) => {
       .catch(_ => {
         setError(true)
       })
-  }, [gender])
+      searchMovie(search)
+      .then(({data}) => {
+        setMovies(data.results)
+        // setPages(data.total_pages)
+      })
+      .catch(_ => {
+        setError(true)
+      })
+  }, [ gender, search ])
 
   if(loading) <p>Cargando....</p>
   if(error) <p>Algo salio mal</p>
@@ -39,6 +47,7 @@ const Movies = ({ gender }) => {
       }) => (
         <Movie
           key={id}
+          id={id}
           title={title}
           popularity={popularity}
           vote_count={vote_count}
