@@ -28,37 +28,49 @@ const Menu = () => {
             placeholder={"Search movie"}
             onChange={(e) => setSearch(e.target.value)}
           />
-          {/* <Button
-            onClick={dispatch({type: "SEARCH_MOVIE", payload: search})}
-          /> */}
         </li>
         <li className="categories">
           <Button
-            onClick={() => navigate("top_rated")}
+            onClick={(e) => {
+              navigate("top_rated")
+              e.stopPropagation()
+            }}
             children="Top rated"
           />
         </li>
         <li className="categories">
           <Button
-            onClick={() => navigate("upcoming")}
+            onClick={(e) => {
+              navigate("upcoming")
+              e.stopPropagation()
+            }}
             children="Upcoming"
           />
         </li>
         <li className="categories">
           <Button
-            onClick={() => navigate("popular")}
+            onClick={(e) => {
+              navigate("popular")
+              e.stopPropagation()
+            }}
             children="Popular"
           />
         </li>
         <li className="categories">
           <Button
-            onClick={() => navigate("on_demand")}
+            onClick={(e) => {
+              navigate("on_demand")
+              e.stopPropagation()
+            }}
             children="On demand"
           />
         </li>
         <li className="categories">
           <Button
-            onClick={() => navigate("movie")}
+            onClick={(e) => {
+              navigate("movie")
+              e.stopPropagation()
+            }}
             children="movie"
           />
         </li>

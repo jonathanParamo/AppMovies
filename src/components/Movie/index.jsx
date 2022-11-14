@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom"
 import "./styles.css"
 
@@ -11,12 +10,16 @@ const Movie = ({
   overview
 }) => {
   const navigate = useNavigate()
+
+  const redirect = (id) =>{
+    navigate(`movie/${id}`)
+  }
   return (
     <article
       className="card_movie"
-      onClick={() => {
-        // dispatch({ type: "MOVIE_ID", payload: id})
-        navigate(`movie/${id}`)
+      onClick={(e) => {
+        redirect(id)
+        e.stopPropagation()
       }}
     >
       <img
