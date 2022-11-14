@@ -32,7 +32,7 @@ const Menu = () => {
         <li className="categories">
           <Button
             onClick={(e) => {
-              navigate("top_rated")
+              navigate("category/top_rated")
               e.stopPropagation()
             }}
             children="Top rated"
@@ -41,7 +41,7 @@ const Menu = () => {
         <li className="categories">
           <Button
             onClick={(e) => {
-              navigate("upcoming")
+              navigate("category/upcoming")
               e.stopPropagation()
             }}
             children="Upcoming"
@@ -50,7 +50,7 @@ const Menu = () => {
         <li className="categories">
           <Button
             onClick={(e) => {
-              navigate("popular")
+              navigate("category/popular")
               e.stopPropagation()
             }}
             children="Popular"
@@ -59,7 +59,7 @@ const Menu = () => {
         <li className="categories">
           <Button
             onClick={(e) => {
-              navigate("on_demand")
+              navigate("category/now_playing")
               e.stopPropagation()
             }}
             children="On demand"

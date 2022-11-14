@@ -1,10 +1,12 @@
 import { useState, useEffect  } from "react"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import "./styles.css"
 import Movie from "../../components/Movie"
 import { getMovies, searchMovie } from "../../Utils/Api"
 
-const Movies = ({ gender, search }) => {
+const Movies = ({ search }) => {
+  const { name } = useParams();
+  console.log('xxx name: ', name);
   const [ loading, setLoading ] = useState(false)
   const [ movies, setMovies ] = useState([])
   // const [ pages, setPages ] = useState(0)
@@ -12,7 +14,7 @@ const Movies = ({ gender, search }) => {
 
   useEffect(() => {
     setLoading(true)
-    getMovies(gender)
+    getMovies(name)
       .then(({data}) => {
         setMovies(data.results)
         // setPages(data.total_pages)
@@ -28,7 +30,7 @@ const Movies = ({ gender, search }) => {
       .catch(_ => {
         setError(true)
       })
-  }, [ gender, search ])
+  }, [ name, search ])
 
   if(loading) <p>Cargando....</p>
   if(error) <p>Algo salio mal</p>

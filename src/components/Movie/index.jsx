@@ -12,7 +12,7 @@ const Movie = ({
   const navigate = useNavigate()
 
   const redirect = (id) =>{
-    navigate(`movie/${id}`)
+    navigate(`../movie/${id}`)
   }
   return (
     <article
