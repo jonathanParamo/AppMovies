@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.env
 
 # testing
 /coverage
@@ -21,3 +22,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+REACT_APP_MOVIES_MY_KEY=3a9a1b508254d8595fb32cbcb3268550
+REACT_APP_MOVIES=https://api.themoviedb.org/3
