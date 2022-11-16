@@ -1,7 +1,11 @@
+.container_image_movie_component{
+  width: 70%;
+  object-fit: contain;
+}
+
 .background_movie {
-  width: 80%;
+  width: 100%;
   height: 60vh;
-  object-fit: cover;
   box-sizing: border-box;
   border-radius: 5px;
 }

@@ -3,12 +3,11 @@ import {
   as
   Router,
   Route,
-  Routes
+  Routes,
   } from 'react-router-dom';
 import './App.css';
 import Movies from './Pages/Movies';
-import Dashboard from './components/DashBoard'
-import SearchMovie from "./Pages/SearchMovie"
+import Dashboard from './components/Dashboard'
 import MoreInfoMovie from './Pages/MovieInfo';
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
           <Route path='category/:name' element={<Movies />} />
           <Route path='movie/:id' element={<MoreInfoMovie />} />
         </Route>
-          <Route path='/search' element={<SearchMovie/>} />
       </Routes>
     </Router>
   );

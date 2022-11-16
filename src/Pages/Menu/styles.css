@@ -8,8 +8,16 @@ body {
   margin: 0;
 }
 
-.container_main_menu {
+.container_principal {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_main_menu {
+  width: auto;
   padding: 0;
   margin: 0;
   display: flex;
@@ -23,5 +31,44 @@ body {
   width: 18%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.search_menu {
+  display: flex;
+  width: 200px;
+  margin: 0 20px;
+  border: 1px solid #f5f5f5;
+}
+
+.icon_search {
+  color: #f5f5f5;
+  transition: 0.5s;
+}
+
+.icon_search:hover {
+  cursor: pointer;
+  color: #f5f5f5;
+}
+
+.title_app {
+  width: 100%;
+  height: 50px;
+  color: #f5f5f5;
+  background-color: #000814;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+LocalMoviesIcon {
+  width: 30;
+  height: 30;
+}
+
+.options_menu {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
