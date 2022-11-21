@@ -4,16 +4,19 @@ const Input = ({
   placeholder,
   type,
   onChange,
-  className
+  className,
+  label
 }) => {
   return (
     <form>
       <input
+        id="search"
         className={className}
         placeholder={placeholder}
         type={type}
         onChange={onChange}
       />
+      {label}
     </form>
   )
 }

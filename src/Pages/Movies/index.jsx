@@ -40,6 +40,7 @@ const Movies = () => {
   if(loading) <p>Cargando....</p>
   if(error) <p>Algo salio mal</p>
 
+
   const hasData = !!movies && movies.length > 0
   const handleChange = ( event, value) => {
   console.log(value, "aa1a")

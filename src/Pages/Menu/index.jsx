@@ -73,7 +73,7 @@ const Menu = () => {
                 navigate("category/now_playing")
                 e.stopPropagation()
               }}
-              children="On demand"
+              children="Ondemand"
             />
           </li>
         </div>

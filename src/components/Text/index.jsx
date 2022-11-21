@@ -12,6 +12,7 @@ const Text = ({
 }) => {
   return (
     <p
+      id="movie_text"
       className={className}
     >
       {runtime}

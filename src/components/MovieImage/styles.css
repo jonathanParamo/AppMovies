@@ -9,3 +9,18 @@
   box-sizing: border-box;
   border-radius: 5px;
 }
+
+@media(max-width: 720px) {
+  .container_image_movie_component{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .background_movie {
+    width: 170px;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+}

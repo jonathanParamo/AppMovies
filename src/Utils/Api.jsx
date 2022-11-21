@@ -12,12 +12,13 @@ export const getMovies = (gender, page) => {
   })
 }
 
-export const searchMovie = (search) => {
+export const searchMovie = (search, page) => {
   return axios({
     method: "GET",
     baseURL: process.env.REACT_APP_MOVIES,
     url: `/search/movie`,
     params: {
+      page: page || 1,
       api_key: process.env.REACT_APP_MOVIES_MY_KEY,
       query: search,
     },

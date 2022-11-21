@@ -8,7 +8,7 @@ import {
   } from 'react-router-dom';
 import './App.css';
 import Movies from './Pages/Movies';
-import Dashboard from './components/DashBoard'
+import Dashboard from './components/Dashboard'
 import MoreInfoMovie from './Pages/MovieInfo';
 
 function App() {
