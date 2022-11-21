@@ -4,17 +4,18 @@ import {
   Router,
   Route,
   Routes,
+  Navigate,
   } from 'react-router-dom';
 import './App.css';
 import Movies from './Pages/Movies';
-import Dashboard from './components/Dashboard'
+import Dashboard from './components/DashBoard'
 import MoreInfoMovie from './Pages/MovieInfo';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Dashboard /> } />
+        <Route path='*' element={<Navigate to="/dashboard/category/popular" replace />} />
         <Route path='/dashboard/*' element={<Dashboard /> } >
           <Route path='category/:name' element={<Movies />} />
           <Route path='movie/:id' element={<MoreInfoMovie />} />
