@@ -1,0 +1,10 @@
+.movie_title {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin: 10px;
+}
+
+.text_movie {
+  margin: 10px 5px;
+}

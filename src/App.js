@@ -3,18 +3,22 @@ import {
   as
   Router,
   Route,
-  Routes
+  Routes,
+  Navigate,
   } from 'react-router-dom';
 import './App.css';
-import TopRated from './Pages/TopRated';
-import Dasboard from './components/DashBoard';
+import Movies from './Pages/Movies';
+import Dashboard from './components/Dashboard'
+import MoreInfoMovie from './Pages/MovieInfo';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/dashboard/' element={<Dasboard /> } >
-          <Route path='/dashboard/top_rated' element={<TopRated />} />
+        <Route path='*' element={<Navigate to="/dashboard/category/popular" replace />} />
+        <Route path='/dashboard/*' element={<Dashboard /> } >
+          <Route path='category/:name' element={<Movies />} />
+          <Route path='movie/:id' element={<MoreInfoMovie />} />
         </Route>
       </Routes>
     </Router>

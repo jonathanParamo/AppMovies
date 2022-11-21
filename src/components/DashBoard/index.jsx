@@ -1,12 +1,13 @@
 import { Outlet } from "react-router-dom"
-import MainMenu from "../../Pages/MainMenu"
+import Menu from "../../Pages/Menu"
 import React from "react"
 import "./styles.css"
 
 const Dashboard = () => {
+
   return (
     <div className="container_dashboard">
-      <MainMenu />
+      <Menu />
       <Outlet />
     </div>
   )

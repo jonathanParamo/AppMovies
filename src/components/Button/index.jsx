@@ -3,10 +3,12 @@ import "./styles.css"
 const Button = ({
   onClick,
   children,
+  className
 }) => {
   return(
     <button
-      className="button_"
+      id="button_option"
+      className={className}
       onClick={onClick}
     >
       {children}
